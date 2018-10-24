@@ -1,10 +1,5 @@
-.container {
-  height: 90vh;
-  margin: 2rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 10px 10px;
+.wrapper {
+  display: block;
 }
 
 .cell {
@@ -12,6 +7,25 @@
   font-size: 3rem;
   text-align: center;
   padding: 4rem;
+}
+
+.container-1 {
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 10px 10px;
+}
+
+.container-2 {
+  margin: 2rem;
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "left main right"
+    "footer footer footer";
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
 }
 
 .cell-1 {
@@ -52,4 +66,33 @@
 
 .cell-9 {
   background: maroon;
+}
+
+.cell-10 {
+  background: black;
+}
+
+.cell-11 {
+  background: deepskyblue;
+  grid-area: header;
+}
+
+.cell-12 {
+  background: orangered;
+  grid-area: left;
+}
+
+.cell-13 {
+  background: limegreen;
+  grid-area: main;
+}
+
+.cell-14 {
+  background: gold;
+  grid-area: right;
+}
+
+.cell-15 {
+  background: blueviolet;
+  grid-area: footer;
 }
