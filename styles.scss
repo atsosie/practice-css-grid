@@ -1,4 +1,5 @@
-// Built by Amber Tsosie while following along with CSS Grid Area demo by Kevin Powell (https://codepen.io/kevinpowell/pen/mMqvMb)
+// Built by Amber Tsosie while following along with
+// CSS Grid Area demo by Kevin Powell (https://www.youtube.com/watch?v=v5KzBPUEgGQ&t=29s)
 
 // Google font
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,900|Six+Caps");
@@ -66,8 +67,38 @@ header {
   grid-area: header;
 }
 
+header,
+footer {
+  background: $black;
+  color: $yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// since these are identical, they don't need to be separate classes (keep code DRY)
+.header-title,
+.footer-title {
+  @include font-alt($color: $yellow, $font-size: $fs-h2);
+}
+
 .hero {
   grid-area: hero;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/gridarea-hero-bg.jpg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-title {
+  @include font-alt($fs-xl);
+  margin: 0;
+}
+
+.hero-subtitle {
+  @include font-base($color: $white, $font-size: $fs-h2);
+  margin: 0;
 }
 
 main {
@@ -76,6 +107,8 @@ main {
 
 aside {
   grid-area: sidebar;
+  background: $dark-gray;
+  padding: 2em;
 }
 
 footer {
