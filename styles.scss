@@ -1,4 +1,4 @@
-// Starter file for CSS Grid Area demo by Kevin Powell (https://codepen.io/kevinpowell/pen/mMqvMb)
+// Built while following along with CSS Grid Area demo by Kevin Powell (https://codepen.io/kevinpowell/pen/mMqvMb)
 
 // Google font
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,900|Six+Caps");
@@ -51,4 +51,16 @@ $white: #fff;
 body {
   @include font-base;
   line-height: 1.6;
+
+  display: grid;
+  grid-template-rows: 10em 50vh auto 10em;
+  grid-template-columns: 1fr 5fr 2fr 1fr;
+}
+
+.new-class {
+  color: blue;
+}
+
+.another-class {
+  color: red;
 }
